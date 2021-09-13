@@ -8,18 +8,32 @@ type netsuite.cmscontenttype {
   }
   string name {
     _required = true
+    _restriction = {
+      max_length = 999
+    }
   }
   string label {
     _required = true
+    _restriction = {
+      max_length = 18
+    }
   }
   string customrecordid {
     _required = true
   }
   string description {
+    _restriction = {
+      max_length = 999
+    }
   }
   string iconimagepath {
+    _restriction = {
+      max_length = 999
+    }
   }
   string _lastfetchtime {
     _hidden_value = true
+  }
+  string application_id {
   }
 }

@@ -1,8 +1,8 @@
-netsuite.entitycustomfield custentity_slt_e2e_test {
-  scriptid = "custentity_slt_e2e_test"
+netsuite.entitycustomfield custentity14 {
+  scriptid = "custentity14"
   accesslevel = "2"
-  appliestocontact = true
-  appliestocustomer = false
+  appliestocontact = false
+  appliestocustomer = true
   appliestoemployee = true
   appliestogroup = false
   appliestoothername = false
@@ -10,21 +10,20 @@ netsuite.entitycustomfield custentity_slt_e2e_test {
   appliestopricelist = false
   appliestoprojecttemplate = false
   appliestostatement = false
-  appliestovendor = false
+  appliestovendor = true
   appliestowebsite = false
   applyformatting = false
   availableexternally = false
-  checkspelling = true
+  checkspelling = false
   defaultchecked = false
-  description = "Some string with special chars !\"&​’"
   displaytype = "NORMAL"
   encryptatrest = false
-  fieldtype = "CHECKBOX"
+  fieldtype = "TEXT"
   globalsearch = false
   isformula = false
   ismandatory = false
   isparent = false
-  label = "created by oss e2e - 2040205"
+  label = "ofer"
   searchlevel = "2"
   showhierarchy = false
   showinlist = false

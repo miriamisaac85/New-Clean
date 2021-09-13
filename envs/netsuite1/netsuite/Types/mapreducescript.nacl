@@ -201,6 +201,9 @@ type netsuite.mapreducescript_scriptcustomfields_scriptcustomfield {
   }
   string label {
     _required = true
+    _restriction = {
+      max_length = 200
+    }
   }
   string selectrecordtype {
   }
@@ -314,17 +317,26 @@ type netsuite.mapreducescript {
   }
   string name {
     _required = true
+    _restriction = {
+      max_length = 40
+    }
   }
   string scriptfile {
     _required = true
   }
   string description {
+    _restriction = {
+      max_length = 999
+    }
   }
   boolean isinactive {
   }
   boolean notifyadmins {
   }
   string notifyemails {
+    _restriction = {
+      max_length = 999
+    }
   }
   string notifygroup {
   }
@@ -338,5 +350,7 @@ type netsuite.mapreducescript {
   }
   string _lastfetchtime {
     _hidden_value = true
+  }
+  string application_id {
   }
 }

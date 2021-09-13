@@ -17,6 +17,9 @@ type netsuite.pluginimplementation {
   }
   string name {
     _required = true
+    _restriction = {
+      max_length = 40
+    }
   }
   string scriptfile {
     _required = true
@@ -28,12 +31,18 @@ type netsuite.pluginimplementation {
     _required = true
   }
   string description {
+    _restriction = {
+      max_length = 999
+    }
   }
   boolean isinactive {
   }
   boolean notifyadmins {
   }
   string notifyemails {
+    _restriction = {
+      max_length = 999
+    }
   }
   string notifygroup {
   }
@@ -47,5 +56,7 @@ type netsuite.pluginimplementation {
   }
   string _lastfetchtime {
     _hidden_value = true
+  }
+  string application_id {
   }
 }

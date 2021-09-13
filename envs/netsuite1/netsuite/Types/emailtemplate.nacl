@@ -3,21 +3,30 @@ type netsuite.emailtemplate {
     _required = true
     isAttribute = true
     _restriction = {
-      regex = "^custemailtmpl[0-9a-z_]+"
+      regex = "standardemailtemplate|standardpaymentlinktransactionemailtemplate|^custemailtmpl[0-9a-z_]+"
     }
   }
   string name {
     _required = true
+    _restriction = {
+      max_length = 60
+    }
   }
   string mediaitem {
   }
   string description {
+    _restriction = {
+      max_length = 1000
+    }
   }
   netsuite.emailtemplate_recordtype recordtype {
   }
   boolean isinactive {
   }
   string subject {
+    _restriction = {
+      max_length = 199
+    }
   }
   boolean isprivate {
   }
@@ -32,5 +41,7 @@ type netsuite.emailtemplate {
   }
   string _lastfetchtime {
     _hidden_value = true
+  }
+  string application_id {
   }
 }

@@ -95,6 +95,9 @@ type netsuite.workflow_workflowstates_workflowstate_workflowstatecustomfields_wo
   }
   string label {
     _required = true
+    _restriction = {
+      max_length = 200
+    }
   }
   string selectrecordtype {
   }
@@ -2282,6 +2285,9 @@ type netsuite.workflow_workflowcustomfields_workflowcustomfield {
   }
   string label {
     _required = true
+    _restriction = {
+      max_length = 200
+    }
   }
   string selectrecordtype {
   }
@@ -2589,5 +2595,7 @@ type netsuite.workflow {
   }
   string _lastfetchtime {
     _hidden_value = true
+  }
+  string application_id {
   }
 }

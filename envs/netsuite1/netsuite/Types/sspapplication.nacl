@@ -19,6 +19,9 @@ type netsuite.sspapplication_entrypoints_entrypoint {
     _required = true
   }
   string entryparameter {
+    _restriction = {
+      max_length = 60
+    }
   }
 }
 type netsuite.sspapplication {
@@ -31,20 +34,32 @@ type netsuite.sspapplication {
   }
   string name {
     _required = true
+    _restriction = {
+      max_length = 40
+    }
   }
   netsuite.plugintype_status status {
     _required = true
   }
   string rootpath {
     _required = true
+    _restriction = {
+      max_length = 999
+    }
   }
   string appfolder {
     _required = true
   }
   string runtimeversion {
     _required = true
+    _restriction = {
+      max_length = 40
+    }
   }
   string description {
+    _restriction = {
+      max_length = 3999
+    }
   }
   boolean isinactive {
   }
@@ -60,5 +75,7 @@ type netsuite.sspapplication {
   }
   string _lastfetchtime {
     _hidden_value = true
+  }
+  string application_id {
   }
 }

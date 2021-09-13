@@ -31,7 +31,7 @@ netsuite.transactioncolumncustomfield custcol_slt_e2e_test {
   fieldtype = "CHECKBOX"
   isformula = false
   ismandatory = false
-  label = "created by oss e2e - 3376289"
+  label = "created by oss e2e - 2040205"
   searchlevel = "2"
   showhierarchy = false
   sourcefrom = netsuite.entitycustomfield.instance.custentity_slt_e2e_test.scriptid

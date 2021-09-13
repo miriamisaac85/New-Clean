@@ -45,4 +45,8 @@ type netsuite.centertab {
   string _lastfetchtime {
     _hidden_value = true
   }
+  string application_id {
+  }
+  boolean labelTranslate {
+  }
 }

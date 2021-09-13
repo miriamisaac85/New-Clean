@@ -394,6 +394,9 @@ type netsuite.publisheddashboard_dashboards_dashboard_centercolumn_customsearch 
   boolean allowinlineediting {
   }
   string title {
+    _restriction = {
+      max_length = 40
+    }
   }
 }
 type netsuite.publisheddashboard_dashboards_dashboard_centercolumn_customportlet {
@@ -410,8 +413,10 @@ type netsuite.publisheddashboard_dashboards_dashboard_centercolumn_customportlet
 }
 type netsuite.publisheddashboard_dashboards_dashboard_centercolumn_customportlet_parameters_parameter {
   string id {
+    _required = true
   }
   string value {
+    _required = true
   }
 }
 type netsuite.publisheddashboard_dashboards_dashboard_centercolumn_calendar {
@@ -451,6 +456,9 @@ type netsuite.publisheddashboard_dashboards_dashboard_centercolumn_analytics {
   boolean isminimized {
   }
   string name {
+    _restriction = {
+      max_length = 50
+    }
   }
   netsuite.portlet_analytics_height height {
   }
@@ -467,6 +475,9 @@ type netsuite.publisheddashboard {
   }
   string name {
     _required = true
+    _restriction = {
+      max_length = 30
+    }
   }
   string center {
     _required = true
@@ -476,6 +487,9 @@ type netsuite.publisheddashboard {
   boolean locknewbar {
   }
   string notes {
+    _restriction = {
+      max_length = 4000
+    }
   }
   netsuite.publisheddashboard_dashboards dashboards {
   }
@@ -483,5 +497,7 @@ type netsuite.publisheddashboard {
   }
   string _lastfetchtime {
     _hidden_value = true
+  }
+  string application_id {
   }
 }

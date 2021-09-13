@@ -94,4 +94,6 @@ type netsuite.sublist {
   string _lastfetchtime {
     _hidden_value = true
   }
+  string application_id {
+  }
 }

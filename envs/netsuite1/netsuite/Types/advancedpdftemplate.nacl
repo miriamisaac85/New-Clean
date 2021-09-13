@@ -11,8 +11,14 @@ type netsuite.advancedpdftemplate {
   }
   string title {
     _required = true
+    _restriction = {
+      max_length = 297
+    }
   }
   string description {
+    _restriction = {
+      max_length = 4000
+    }
   }
   boolean displaysourcecode {
   }
@@ -29,5 +35,7 @@ type netsuite.advancedpdftemplate {
   }
   string _lastfetchtime {
     _hidden_value = true
+  }
+  string application_id {
   }
 }

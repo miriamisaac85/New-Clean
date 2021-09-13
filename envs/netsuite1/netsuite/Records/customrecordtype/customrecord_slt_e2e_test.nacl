@@ -24,7 +24,7 @@ netsuite.customrecordtype customrecord_slt_e2e_test {
   includename = true
   isinactive = false
   isordered = false
-  recordname = "created by oss e2e - 3376289"
+  recordname = "created by oss e2e - 2040205"
   showcreationdate = false
   showcreationdateonlist = false
   showid = false

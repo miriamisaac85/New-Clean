@@ -25,6 +25,9 @@ type netsuite.customlist {
   }
   string name {
     _required = true
+    _restriction = {
+      max_length = 30
+    }
   }
   string description {
   }
@@ -38,5 +41,7 @@ type netsuite.customlist {
   }
   string _lastfetchtime {
     _hidden_value = true
+  }
+  string application_id {
   }
 }

@@ -1,18 +1,61 @@
 netsuite {
-  deployReferencedElements = false
-  skipList = {
-    types = {
-      dataset = [
-        ".*",
+  fetch = {
+    include = {
+      types = [
+        {
+          name = ".*"
+        },
       ]
-      savedsearch = [
-        ".*",
-      ]
-      workbook = [
-        ".*",
+      fileCabinet = [
+        "^/SuiteScripts.*",
+        "^/Templates.*",
+        "^/SuiteBundles.*",
       ]
     }
-    filePaths = [
-    ]
+    exclude = {
+      fileCabinet = [
+      ]
+      types = [
+        {
+          name = "dataset"
+        },
+        {
+          name = "savedsearch"
+          ids = [
+            ".*",
+          ]
+        },
+        {
+          name = "workbook"
+        },
+        {
+          name = "customer"
+        },
+        {
+          name = "accountingPeriod"
+        },
+        {
+          name = "employee"
+        },
+        {
+          name = "job"
+        },
+        {
+          name = "manufacturingCostTemplate"
+        },
+        {
+          name = "partner"
+        },
+        {
+          name = "solution"
+        },
+        {
+          name = "giftCertificateItem"
+        },
+        {
+          name = "downloadItem"
+        },
+      ]
+    }
   }
 }

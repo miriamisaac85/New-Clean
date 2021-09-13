@@ -148,6 +148,9 @@ type netsuite.customsegment {
   }
   string label {
     _required = true
+    _restriction = {
+      max_length = 40
+    }
   }
   string recordtype {
     _required = true
@@ -157,8 +160,14 @@ type netsuite.customsegment {
   netsuite.customsegment_fieldtype fieldtype {
   }
   string description {
+    _restriction = {
+      max_length = 999
+    }
   }
   string help {
+    _restriction = {
+      max_length = 999
+    }
   }
   boolean hasglimpact {
   }
@@ -180,5 +189,7 @@ type netsuite.customsegment {
   }
   string _lastfetchtime {
     _hidden_value = true
+  }
+  string application_id {
   }
 }

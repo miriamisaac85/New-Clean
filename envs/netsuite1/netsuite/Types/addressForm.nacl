@@ -93,6 +93,9 @@ type netsuite.addressForm {
   }
   string standard {
     isAttribute = true
+    _restriction = {
+      max_length = 99
+    }
   }
   string name {
     _required = true
@@ -108,5 +111,7 @@ type netsuite.addressForm {
   }
   string _lastfetchtime {
     _hidden_value = true
+  }
+  string application_id {
   }
 }

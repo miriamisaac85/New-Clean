@@ -74,6 +74,9 @@ type netsuite.savedcsvimport {
   }
   string importname {
     _required = true
+    _restriction = {
+      max_length = 64
+    }
   }
   netsuite.csvimport_datahandling datahandling {
     _required = true
@@ -111,8 +114,14 @@ type netsuite.savedcsvimport {
   boolean runserversuitescript {
   }
   string multiselectdelimiter {
+    _restriction = {
+      max_length = 1
+    }
   }
   string description {
+    _restriction = {
+      max_length = 499
+    }
   }
   netsuite.savedcsvimport_audience audience {
   }
@@ -122,5 +131,7 @@ type netsuite.savedcsvimport {
   }
   string _lastfetchtime {
     _hidden_value = true
+  }
+  string application_id {
   }
 }

@@ -49,6 +49,9 @@ type netsuite.othercustomfield {
   }
   string label {
     _required = true
+    _restriction = {
+      max_length = 200
+    }
   }
   netsuite.generic_customrecordothercustomfield_rectype rectype {
     _required = true
@@ -125,5 +128,7 @@ type netsuite.othercustomfield {
   }
   string _lastfetchtime {
     _hidden_value = true
+  }
+  string application_id {
   }
 }

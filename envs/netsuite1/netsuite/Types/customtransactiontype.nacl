@@ -9,6 +9,9 @@ type netsuite.customtransactiontype_statuses_status {
   }
   string description {
     _required = true
+    _restriction = {
+      max_length = 480
+    }
   }
   netsuite.customtransactiontype_statuses_id id {
     _required = true
@@ -73,6 +76,9 @@ type netsuite.customtransactiontype {
   }
   string name {
     _required = true
+    _restriction = {
+      max_length = 96
+    }
   }
   netsuite.customtransactiontype_subliststyle subliststyle {
   }
@@ -100,5 +106,7 @@ type netsuite.customtransactiontype {
   }
   string _lastfetchtime {
     _hidden_value = true
+  }
+  string application_id {
   }
 }

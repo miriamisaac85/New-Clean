@@ -4,7 +4,7 @@ netsuite.emailtemplate custemailtmpl_slt_e2e_test {
   addunsubscribelink = false
   isinactive = false
   isprivate = false
-  name = "created by oss e2e - 3376289"
+  name = "created by oss e2e - 2040205"
   recordtype = "TRANSACTION"
   subject = "email subject"
   usesmedia = false

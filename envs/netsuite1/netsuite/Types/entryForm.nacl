@@ -372,6 +372,9 @@ type netsuite.entryForm_actionbar_menu_menuitem {
     _required = true
   }
   string label {
+    _restriction = {
+      max_length = 40
+    }
   }
   boolean visible {
   }
@@ -383,8 +386,14 @@ type netsuite.entryForm_actionbar_customMenu {
 type netsuite.entryForm_actionbar_customMenu_customMenuItem {
   string label {
     _required = true
+    _restriction = {
+      max_length = 99
+    }
   }
   string function {
+    _restriction = {
+      max_length = 200
+    }
   }
 }
 type netsuite.entryForm_actionbar_customButtons {
@@ -394,8 +403,14 @@ type netsuite.entryForm_actionbar_customButtons {
 type netsuite.entryForm_actionbar_customButtons_customButton {
   string label {
     _required = true
+    _restriction = {
+      max_length = 99
+    }
   }
   string function {
+    _restriction = {
+      max_length = 200
+    }
   }
 }
 type netsuite.entryForm_actionbar_buttons {
@@ -407,6 +422,9 @@ type netsuite.entryForm_actionbar_buttons_button {
     _required = true
   }
   string label {
+    _restriction = {
+      max_length = 40
+    }
   }
   boolean visible {
   }
@@ -451,5 +469,7 @@ type netsuite.entryForm {
   }
   string _lastfetchtime {
     _hidden_value = true
+  }
+  string application_id {
   }
 }

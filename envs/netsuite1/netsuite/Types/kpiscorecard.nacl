@@ -15,6 +15,9 @@ type netsuite.kpiscorecard_ranges_range {
   boolean invertcomparison {
   }
   string label {
+    _restriction = {
+      max_length = 99
+    }
   }
 }
 type netsuite.kpiscorecard_kpis {
@@ -34,12 +37,18 @@ type netsuite.kpiscorecard_kpis_kpi {
   boolean invertcomparison {
   }
   string formula {
+    _restriction = {
+      max_length = 200
+    }
   }
   boolean lessismore {
   }
   boolean hidden {
   }
   string label {
+    _restriction = {
+      max_length = 99
+    }
   }
 }
 type netsuite.kpiscorecard_highlightings {
@@ -108,11 +117,17 @@ type netsuite.kpiscorecard {
   }
   string name {
     _required = true
+    _restriction = {
+      max_length = 25
+    }
   }
   netsuite.kpiscorecards_useperiods useperiods {
     _required = true
   }
   string description {
+    _restriction = {
+      max_length = 999
+    }
   }
   netsuite.kpiscorecard_audience audience {
   }
@@ -126,5 +141,7 @@ type netsuite.kpiscorecard {
   }
   string _lastfetchtime {
     _hidden_value = true
+  }
+  string application_id {
   }
 }

@@ -49,6 +49,9 @@ type netsuite.itemnumbercustomfield {
   }
   string label {
     _required = true
+    _restriction = {
+      max_length = 200
+    }
   }
   string selectrecordtype {
   }
@@ -126,5 +129,7 @@ type netsuite.itemnumbercustomfield {
   }
   string _lastfetchtime {
     _hidden_value = true
+  }
+  string application_id {
   }
 }

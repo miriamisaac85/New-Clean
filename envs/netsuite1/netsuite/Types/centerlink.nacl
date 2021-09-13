@@ -8,11 +8,19 @@ type netsuite.centerlink {
   }
   string label {
     _required = true
+    _restriction = {
+      max_length = 50
+    }
   }
   string url {
     _required = true
+    _restriction = {
+      max_length = 999
+    }
   }
   string _lastfetchtime {
     _hidden_value = true
+  }
+  string application_id {
   }
 }

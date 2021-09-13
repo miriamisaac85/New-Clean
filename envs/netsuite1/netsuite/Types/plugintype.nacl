@@ -5,8 +5,14 @@ type netsuite.plugintype_methods {
 type netsuite.plugintype_methods_method {
   string method {
     _required = true
+    _restriction = {
+      max_length = 30
+    }
   }
   string description {
+    _restriction = {
+      max_length = 30
+    }
   }
 }
 type netsuite.plugintype_libraries {
@@ -28,6 +34,9 @@ type netsuite.plugintype {
   }
   string name {
     _required = true
+    _restriction = {
+      max_length = 40
+    }
   }
   string scriptfile {
     _required = true
@@ -39,12 +48,18 @@ type netsuite.plugintype {
     _required = true
   }
   string description {
+    _restriction = {
+      max_length = 999
+    }
   }
   boolean isinactive {
   }
   boolean notifyadmins {
   }
   string notifyemails {
+    _restriction = {
+      max_length = 999
+    }
   }
   string notifygroup {
   }
@@ -53,6 +68,9 @@ type netsuite.plugintype {
   boolean notifyuser {
   }
   string class {
+    _restriction = {
+      max_length = 40
+    }
   }
   string documentationfile {
   }
@@ -64,5 +82,7 @@ type netsuite.plugintype {
   }
   string _lastfetchtime {
     _hidden_value = true
+  }
+  string application_id {
   }
 }

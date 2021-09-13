@@ -16,4 +16,9 @@ type netsuite.folder {
   string _lastfetchtime {
     _hidden_value = true
   }
+  string internalId {
+    _hidden_value = true
+  }
+  string application_id {
+  }
 }

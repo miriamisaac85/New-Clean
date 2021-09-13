@@ -43,6 +43,9 @@ type netsuite.workbook {
   }
   string name {
     _required = true
+    _restriction = {
+      max_length = 50
+    }
   }
   netsuite.cdata definition {
     _required = true
@@ -57,5 +60,9 @@ type netsuite.workbook {
   }
   string _lastfetchtime {
     _hidden_value = true
+  }
+  string application_id {
+  }
+  boolean nameTranslate {
   }
 }

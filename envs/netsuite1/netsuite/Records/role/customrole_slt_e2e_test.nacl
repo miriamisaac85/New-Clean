@@ -9,7 +9,7 @@ netsuite.role customrole_slt_e2e_test {
   issinglesignononly = false
   issupportrole = false
   iswebserviceonlyrole = false
-  name = "created by oss e2e - 3376289"
+  name = "created by oss e2e - 2040205"
   restrictbydevice = false
   restricttimeandexpenses = false
   subsidiaryoption = "OWN"

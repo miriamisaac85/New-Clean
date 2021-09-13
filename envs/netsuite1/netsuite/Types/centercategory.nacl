@@ -13,6 +13,8 @@ type netsuite.centercategory_links_link {
   }
   boolean shortlist {
   }
+  boolean linklabelTranslate {
+  }
 }
 type netsuite.centercategory {
   serviceid scriptid {
@@ -30,10 +32,17 @@ type netsuite.centercategory {
   }
   string label {
     _required = true
+    _restriction = {
+      max_length = 99
+    }
   }
   netsuite.centercategory_links links {
   }
   string _lastfetchtime {
     _hidden_value = true
+  }
+  string application_id {
+  }
+  boolean labelTranslate {
   }
 }
